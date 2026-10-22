@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071a25"><title>Bitácora de Terreno</title>
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div><small>ALMAR WATER SOLUTIONS · OPERACIÓN LOCAL</small><h1>Bitácora de Terreno</h1></div><span id="sync" class="pill">● Local</span></header>
+<nav><button data-tab="registro" class="active">＋ Registrar</button><button data-tab="datos">☷ Datos</button><button data-tab="graficos">⌁ Gráficos</button><button data-tab="limites">⚙ Límites</button></nav>
+<main>
+<section id="registro" class="tab active">
+<form id="sampleForm">
+<div class="card"><h2>Muestra en terreno</h2><label>Planta<select id="planta" required><option>PTAS Las Tórtolas (PTAS)</option></select></label>
+<div class="grid"><label>Punto de muestreo<select id="punto" required><option>Afluente</option><option>Efluente</option></select></label><label>Operador<input id="operador" placeholder="Nombre de quien mide" required></label><label>Fecha<input id="fecha" type="date" required></label><label>Hora<input id="hora" type="time" required></label></div></div>
+<div class="card"><div class="titleline"><h2>Lecturas</h2><small>Deja vacío lo no medido</small></div><div id="readings" class="reading-grid"></div></div>
+<div class="card"><label>Observaciones<textarea id="observaciones" placeholder="Equipo usado, calibración, condición de la planta..."></textarea></label><button class="primary" type="submit">Guardar muestreo</button><div id="msg"></div></div>
+</form></section>
+<section id="datos" class="tab"><div class="card"><div class="titleline"><h2>Datos guardados</h2><button id="csv" class="link">Exportar CSV</button></div><div id="dataList"></div></div></section>
+<section id="graficos" class="tab"><div class="card"><h2>Gráficos</h2><div class="grid"><label>Parámetro<select id="chartParam"></select></label><label>Punto<select id="chartPoint"><option value="">Todos</option><option>Afluente</option><option>Efluente</option></select></label></div><div class="kpis" id="kpis"></div><canvas id="chart" width="900" height="420"></canvas></div></section>
+<section id="limites" class="tab"><div class="card"><h2>Límites y parámetros</h2><p class="muted">Editables en este dispositivo. Los valores iniciales proceden de la maqueta y deben validarse para la operación.</p><div id="limitList"></div><button id="saveLimits" class="primary">Guardar límites</button></div></section>
+</main><script src="app.js"></script></body></html>
