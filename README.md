@@ -1,12 +1,7 @@
-# Bitácora de Terreno - app móvil PWA
+# Bitácora de Terreno v2
+Incluye los 68 registros de la hoja Catastro Gral 2s2026 de Catastro plantas.xlsx.
 
-Aplicación web progresiva para registrar muestreos manuales en planta.
+## Actualizar GitHub Pages
+Reemplace index.html, styles.css, app.js, manifest.json y sw.js; agregue catalogo.js. Conserve la publicación desde main / (root).
 
-## Probar
-Abra `index.html` en un navegador para una prueba básica. Para instalarla como app y habilitar el modo sin conexión, publique esta carpeta en un servidor HTTPS (por ejemplo, Azure Static Web Apps, SharePoint no sirve como hospedaje PWA directo, GitHub Pages o Netlify) y abra la URL desde el móvil. Después use “Añadir a pantalla de inicio”.
-
-## Datos
-Los datos se guardan en el almacenamiento local del navegador del dispositivo. Esta versión no sincroniza entre teléfonos ni con una base central. Use “Exportar CSV” para descargar una copia.
-
-## Límites
-Los valores iniciales son los visibles en la maqueta proporcionada y deben validarse antes de uso operacional.
+Los datos se guardan localmente en el dispositivo. Los parámetros son de captura general y no equivalen a límites regulatorios.
